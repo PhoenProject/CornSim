@@ -1,0 +1,53 @@
+﻿<Window x:Class="CornSim.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CornSim"
+        mc:Ignorable="d"
+        Title="Corn Simulator" Height="450" Width="800" Background="SkyBlue" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="InfoBox" TextAlignment="Center" FontSize="15" HorizontalAlignment="Center" Height="25" Margin="10,20,10,0" TextWrapping="Wrap" Text="Welcome to Corn Simulator" VerticalAlignment="Top" Width="772" IsReadOnly="True"/>
+
+
+
+        <Grid HorizontalAlignment="Left" Height="338" Margin="10,71,0,0" VerticalAlignment="Top" Width="380">
+            <Button FontSize="16" Name="PlantSeed" Height="30" Width="175" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,10,195,0" Content="Plant Seeds" Click="PlantSeed_Click"/>
+            <Button FontSize="16" Name="Harvest" Height="30" Width="175" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="195,10,10,0" Content="Harvest" Click="Harvest_Click"/>
+            <Slider x:Name="SeedQuantity" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="360" Minimum="1" Maximum="20" ValueChanged="SeedQuantity_ValueChanged" IsSnapToTickEnabled="True" TickFrequency="1"/>
+            <Button FontSize="16" x:Name="BuySeedsButton" Height="30" Width="360" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,68,10,0" Content="Buy seed x1 ($5)" Click="BuySeeds_Click"/>
+            <Button FontSize="16" x:Name="BuyExpansion" Height="30" Width="360" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,138,10,0" Content="Expand Field ($250)" Click="ExpandField_Click"/>
+            <Button FontSize="16" x:Name="BuyScarecrow" Height="30" Width="175" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,173,195,0" Content="Buy Scarecrow ($2500)" Click="BuyScarecrow_Click"/>
+            <Button FontSize="16" x:Name="BuyHarvester" Height="30" Width="175" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,208,195,0" Content="Buy Harvester ($3500)" Click="BuyHarvester_Click"/>
+            <Button FontSize="16" x:Name="BuyPlanter" Height="30" Width="175" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="195,208,10,0" Content="Buy Planter ($4500)" Click="BuyPlanter_Click"/>
+            <Button FontSize="16" x:Name="BuySprinkler" Height="30" Width="175" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="195,173,10,0" Content="Buy Sprinkler ($5000)" Click="BuySprinkler_Click"/>
+            <Button FontSize="16" x:Name="ChangeMarket" Height="30" Width="360" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,243,10,0" Content="Change Market ($20000)" Click="ChangeMarket_Click"/>
+            <Button FontSize="16" x:Name="WaterField" Height="30" Width="360" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,103,10,0" Content="Water Field (+1% growth)" Click="WaterField_Click"/>
+
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Height="338" Margin="402,71,0,0" VerticalAlignment="Top" Width="380">
+            <Label Content="Money:" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" FontSize="20"/>
+            <Label x:Name="MoneyBox" HorizontalAlignment="Left" Height="40" Margin="170,10,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
+
+            <Label Content="Seeds:" HorizontalAlignment="Left" Height="40" Margin="10,55,0,0" VerticalAlignment="Top" Width="140" FontSize="20"/>
+            <Label x:Name="SeedBox" HorizontalAlignment="Left" Height="40" Margin="170,55,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
+
+            <Label Content="Planted Seeds:" HorizontalAlignment="Left" Height="40" Margin="10,100,0,0" VerticalAlignment="Top" Width="140" FontSize="20"/>
+            <Label x:Name="PlantedSeeds" HorizontalAlignment="Left" Height="40" Margin="170,100,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
+
+            <Label Content="Growth" HorizontalAlignment="Left" Height="40" Margin="10,145,0,0" VerticalAlignment="Top" Width="140" FontSize="20"/>
+            <Label x:Name="GrowthBox" HorizontalAlignment="Left" Height="40" Margin="170,145,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
+
+            <Label Content="Field Space:" HorizontalAlignment="Left" Height="40" Margin="10,190,0,0" VerticalAlignment="Top" Width="140" FontSize="20"/>
+            <Label x:Name="FieldSpace" HorizontalAlignment="Left" Height="40" Margin="170,190,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
+
+            <Label Content="Equipment:" HorizontalAlignment="Left" Height="40" Margin="10,235,0,0" VerticalAlignment="Top" Width="140" FontSize="20"/>
+            <Label x:Name="EquipmentBox" HorizontalAlignment="Left" Height="48" Margin="10,280,0,0" VerticalAlignment="Top" Width="360" FontSize="15"/>
+
+            <!--<TextBox x:Name="DEBUGBOX" Height="30" Width="360" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,298,10,0" TextAlignment="Center" FontSize="16" TextWrapping="Wrap" IsReadOnly="True"/>-->
+        </Grid>
+
+
+    </Grid>
+</Window>
